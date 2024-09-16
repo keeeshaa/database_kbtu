@@ -1,0 +1,9 @@
+ALTER TABLE users
+ DROP CONSTRAINT CHK_ISADMIN;
+
+ALTER TABLE users
+ ALTER COLUMN isadmin DROP DEFAULT;
+
+ALTER TABLE users
+ ALTER COLUMN isadmin TYPE bool USING isadmin:: boolean;
+
