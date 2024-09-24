@@ -4,7 +4,7 @@ CREATE DATABASE lab2;
 
 -- 2. 
 CREATE TABLE countries (
-    country_id INT PRIMARY KEY AUTO_INCREMENT,
+    country_id SERIAL PRIMARY KEY,
     country_name VARCHAR(255),
     region_id INT,
     population INT
