@@ -1,5 +1,5 @@
 -- 1.
-CREATE DATABASE lab4;
+create database lab4;
 
 -- 2. 
 create table if not exists warehouses(
