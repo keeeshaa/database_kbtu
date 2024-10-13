@@ -76,9 +76,13 @@ join customers on orders.customer_id = customers.customer_id
 where customers.city = 'New York';
 
 --9.
-select customers.* from customers 
-join orders on orders.customer_id = customers.customer_id
-where purch_amt>10;
+select customers.*
+from customers
+where customers.customer_id in (
+    select orders.customer_id
+    from orders
+    where orders.purch_amt > 10
+);
 
 --10.
 select sum(grade) as total_grade from customers;
